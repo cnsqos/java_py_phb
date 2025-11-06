@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // 1. 명시적 형변환
+
+        // 문자열 -> 숫자
+        // Number()
+        // parseInt()
+        // parseFloat()
+        let num1 = Number('42');
+        console.log(typeof num1);
+
+        // parseInt() 앞에서부터 가능한 부분만 파싱 (정수만 추출)
+        let num2 = parseInt('3.14');
+        console.log(num2);
+
+        // parseFloat() 실수까지 추출
+        let num3 = parseFloat('3.14');
+        console.log(num3);
+
+        // 숫자 -> 문자열
+        // String()
+        let str1 = String(123);
+        console.log(str1);
+
+        let str2 = (456).toString();
+        console.log(str2);
+
+        // 특정한 값 => 논리형(boolean)
+        // Boolean()
+        let bool1 = Boolean(0); //0 -> false
+        console.log(bool1);
+
+        // 문자열을 bool 타입으로 바꾸면
+        // 어떻게 될까?
+        let bool2 = Boolean('0'); //문자열 -> true
+        console.log(bool2);
+
+        let bool3 = Boolean('');//비어있는 문자열 -> false
+        console.log(bool3);
+
+        let bool4 = Boolean(24859);
+        
+        console.log(bool4);
+        
+        // 암묵적 형변환
+        let x = '5'+2 // '5' + '2' => '52'
+        // 문자열 뒤 + 는 문자열로 변환한 뒤 연산이 발생
+        console.log(x);
+
+        x = 'Hello'+true;
+        console.log(x);
+
+        x = '5' - 2; //문자열 -> 숫자로 바꿔서 연산
+        console.log(x);
+
+        x= true -1; //논리형 -> 숫자로 바꿔서 연산
+        console.log(x);
+
+        x = false - 1;
+        console.log(x);
+
+
+
+    </script>
+</head>
+<body>
+
+
+</body>
+</html>

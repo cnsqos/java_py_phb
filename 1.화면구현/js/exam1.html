@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let ball = 25;
+
+        box = (ball % 4 === 0) ? ball/4 : parseInt(ball / 4)+1;
+        console.log("박스의 개수 : " + box + "개");
+
+
+        let age = 17;
+        let ticketPrice = 12000;
+
+        let finalPrice = (age < 19) ? ticketPrice*0.8 : ticketPrice;
+        console.log(`${age} 살의 티켓 가격은 + ${finalPrice}원 입니다.`)
+
+        
+        // 주문금액 28000
+        // vip : true
+        // 주문금액이 3마넌 이상 이거나 vip 회원은 무료배송
+        // 무료배송인지 아닌지 예측하여 출력하세요
+
+        let orderPrice = 28000;
+        let isVIP = true;
+        
+        let isFree = (orderPrice >= 30000) || (isVIP === true);
+        console.log(isFree);
+
+
+        // 현재 온도가 28도 이상이면 “에어컨 작동”, 18도 이하면 “난방 작동”, 그 사이면 “대기 상태”를 출력하는 프로그램을 작성하시오 (중첩 삼항연산자를 사용하세요)
+
+        let temperature = 23;
+
+        let result = (temperature >= 28) ? "에어컨 작동" : (temperature <= 18) ? "난방 작동" : "대기 상태";
+        console.log(result);
+
+        
+
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

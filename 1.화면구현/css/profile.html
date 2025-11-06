@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <style>
+        .s{
+            text-align: center;
+        }
+
+        /* Block */
+        .card{
+            border : 2px solid #ddd;
+            border-radius : 10px;
+            padding : 16px;
+            width: 250px;
+            margin : 20px auto;
+            font-family :sans-serif;
+        }
+
+        /* Element */
+        .profile__name{
+            font-size : 20px;
+            font-weight: bold;
+            margin-bottom : 10px;
+        }
+        .profile__email{
+            color : #555;
+        }
+
+        /* Modifier */
+        .card--vip{
+            background : #e9c890;
+            border-color : #dbb26e;
+        }
+    </style>
+</head>
+<body>
+    <div class="s">
+        <h2>BEM 프로필 예제</h2>
+    </div>
+
+    <div class="card card--basic">
+        <div class="profile__name">이름: 홍길동</div>
+        <div class="profile__email">이메일: gildong@example.com</div>
+    </div>
+    
+    <div class="card card--vip">
+        <div class="profile__name">이름: 김철수</div>
+        <div class="profile__email">이메일: culsoo@example.com</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 스타일을 지정
+        CSS(스타일)을 적용시키는 방법
+        1.요소를 선택
+            1-1. 태그를 직접 선택 ex) div p body
+            1-2 클래스로 선택 ex).box
+            1-3 아이디로 선택 ex) #div1
+            */
+            .box{
+                width: 100px;
+                height: 100px;
+                color: white;
+                text-align : center;
+                border-radius: 8px;
+                background: #3498db;
+            }
+            /* statilc : 문서 흐름에 따라 자연스럽게 배치(기본값) */
+            .static{
+                position : static;
+            }
+            /* relative : 요소를 원래 위치에서 벗어나게 배치할 수 있게 해준다. 
+            top,right,bottom,left 속성을 이용해 요소의 위치를 옮길 수 있다.
+             원래 자리에서 시각적으로만 이동*/
+            .relative{
+                position : relative;
+                top: 20px;
+                left: 20px;
+            }
+
+            .absolute-parent{
+                position : relative;
+                background: #dfe6e9;
+                width :250px;
+                height: 200px;
+            }
+            /* absolute : 요소를 문서 흐름에서 빼서 가까운 부모요소를 기준으로 이동시켜 배치하는 속성 */
+            .absolute-child{
+                position : absolute;
+                top : 50px;
+                left : 50px;
+            }
+            /* 브라우저 화면을 기준으로 고정된다. 스크롤을 해도 따라다니는 버튼/알림 등에 쓴다 */
+            .fixed{
+                position:fixed;
+                bottom : 20px;
+                right:20px;
+            }
+    </style>
+</head>
+<body>
+    <div class="box static" id="div1">static</div>
+    <div class="box relative">relative</div>
+    <div class="absolute-parent">
+        <div class="box absolute-child">absolute</div>
+    </div>
+    <div class="box fixed">fixed</div>
+</body>
+</html>

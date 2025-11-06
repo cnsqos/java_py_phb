@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+		* {
+		  box-sizing: border-box;
+		  margin: 0;
+		  padding: 0;
+		}
+		body {
+		  font-family: system-ui, sans-serif;
+		  color: #2c3e50;
+		}
+		.head,
+		.foot {
+		  padding: 16px;
+		  text-align: center;
+		  background: #cdd0d3;
+		}
+		
+		.hero {
+		  display: flex;
+		  gap: 20px;
+		  align-items: center;
+		  max-width: 1000px;
+		  margin: 20px auto;
+		  padding: 16px;
+		  background: #f7f9fb;
+		  border: 1px solid #e5e8eb;
+		  border-radius: 10px;
+		}
+		.hero-text {
+		  flex: 0 0 60%;
+		}
+		.hero-text h2 {
+		  margin-bottom: 8px;
+		}
+		.hero-visual {
+		  flex: 0 0 40%;
+		  display: flex;
+		  justify-content: center;
+		  align-items: center;
+		  background: #dfe6e9;
+		  border-radius: 10px;
+		  height: 220px;
+		}
+		
+		.features {
+		  max-width: 1000px;
+		  margin: 0 auto 20px;
+		  padding: 16px;
+		}
+		.features h2 {
+		  margin-bottom: 12px;
+		}
+		.features {
+		  display: flex;
+		  flex-wrap: wrap;
+		  gap: 16px;
+		}
+		.feat {
+		  flex: 1 1 280px;
+		  border: 1px solid #e5e8eb;
+		  border-radius: 10px;
+		  background: #fff;
+		  padding: 16px;
+		}
+	</style>
+</head>
+<body>
+  <header class="head">
+    <h1>Brand Landing다</h1>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-text">
+        <h2 id="hero-title">간결한 메시지로 주목을 끈다다</h2>
+        <p>핵심 가치와 행동 유도 문구를 짧고 명확하게 배치한다다</p>
+      </div>
+      <div class="hero-visual" aria-label="시각 영역 자리">
+        <span>640×360 자리다</span>
+      </div>
+    </section>
+
+    <section class="features" aria-labelledby="f-title">
+      <h2 id="f-title">핵심 기능이다</h2>
+      <article class="feat"><h3>간단하다</h3><p>짧은 설명이다</p></article>
+      <article class="feat"><h3>빠르다</h3><p>짧은 설명이다</p></article>
+      <article class="feat"><h3>확장된다</h3><p>짧은 설명이다</p></article>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <small>© 2025 Split Hero이다</small>
+  </footer>
+</body>
+</html>

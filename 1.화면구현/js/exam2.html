@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        let month = 2;
+
+        switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            console.log(`${month}월은 31일까지 있습니다.`);
+            break;
+
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            console.log(`${month}월은 30일까지 있습니다.`);
+            break;
+
+        case 2:
+            console.log(`${month}월은 28일 또는 29일까지 있습니다.`);
+            break;
+
+        default:
+            console.log("잘못된 월입니다. 1~12 사이의 숫자를 입력하세요.");
+        }
+
+
+
+        // **성적 등급 계산기 만들기**
+        // - **설명**: 점수 `score`를 입력받아 등급을 출력하는 프로그램을 작성하라
+        // - **요구사항**
+            // - 90~100: `A`, 80~89: `B`, 70~79: `C`, 60~69: `D`, 그 외: `F`를 출력하라
+            // - 점수가 0~100 범위를 벗어나면 “유효하지 않은 점수입니다”를 출력하라
+        // - **힌트**: 범위 검사는 최우선으로 처리하면 이후 분기가 깔끔해진다
+        // **입출력 예시**
+        // - 입력: `score = 95` → 출력: `A`
+        // - 입력: `score = -3` → 출력: `유효하지 않은 점수입니다`
+
+
+        let score = 88;
+
+
+        if (score < 0 || score > 100)
+        {console.log("유효하지 않은 점수입니다.");}
+        
+        else if (score >= 90)
+        {console.log("A");}
+        
+        else if (score >= 80)
+        {console.log("B");}
+        
+        else if (score >= 70)
+        {console.log("C");}
+        
+        else if (score >= 60)
+        {console.log("D");}
+        
+        else {console.log("F");}
+
+        // **윤년 판별기**
+        // - **설명**: 연도 `year`가 윤년인지 판별하는 프로그램을 작성하라
+        // - **규칙**
+            // - 4의 배수이면서 100의 배수가 아니면 윤년이다
+            // - 400의 배수이면 윤년이다
+            // - 그 외는 평년이다
+        // - **요구사항**: 윤년이면 `윤년입니다`, 아니면 `평년입니다`를 출력하라
+
+        // **입출력 예시**
+
+        // - 입력: `year = 2024` → 출력: `윤년입니다`
+        // - 입력: `year = 2100` → 출력: `평년입니다`
+
+        let year = 2025;
+        
+        if ((year % 4 === 0 && year % 100 !== 0) || year % 400 === 0)
+        
+        {console.log(`${year}년은 윤년입니다.`);} else
+
+        {console.log(`${year}년은 평년입니다.`);}
+
+        // **자판기 메뉴 선택**
+        // - **설명**: 메뉴 번호 `menu`로 음료를 선택하면 가격을 출력하는 프로그램을 작성하라
+        // - **메뉴**
+            // - 1: 아메리카노 1500원
+            // - 2: 라테 2000원
+            // - 3: 녹차 1800원
+        // - **요구사항**
+            // - `switch`를 사용하고, 존재하지 않는 번호는 “잘못된 선택입니다”를 출력하라
+            // - 여러 메뉴가 같은 가격이면 `case` 묶음을 활용해도 된다
+
+        // **입출력 예시**
+
+        // - 입력: `menu = 1` → 출력: `아메리카노 1500원`
+        // - 입력: `menu = 9` → 출력: `잘못된 선택입니다`
+
+        let menu = 2;
+
+        switch (menu) {
+        case 1:
+            console.log(`아메리카노 1500원`);
+            break;
+
+        case 2:
+            console.log(`라테 2000원`);
+            break;
+        case 3:
+            console.log(`녹차 1800원`);
+            break;
+        
+        default:
+            console.log("잘못된 선택입니다");
+        }
+
+        // **시간대별 인사 메시지**
+
+        // - **설명**: 시각 `hour`(0~23)에 따라 인사를 출력하는 프로그램을 작성하라
+        // - **규칙**
+            // - 5~11시: `좋은 아침입니다`
+            // - 12~17시: `좋은 오후입니다`
+            // - 18~21시: `좋은 저녁입니다`
+            // - 그 외: `좋은 밤입니다`
+        // - **요구사항**
+            // - `if-else`나 `switch(true)` 패턴 중 하나를 사용하라
+            // - 범위를 벗어난 값은 “유효하지 않은 시각입니다”를 출력하라
+
+        // **입출력 예시**
+
+        // - 입력: `hour = 9` → 출력: `좋은 아침입니다`
+        // - 입력: `hour = 23` → 출력: `좋은 밤입니다`
+
+
+        let time = 7;
+
+        switch (time) {
+            case 5:
+            case 6:
+            case 7:
+            case 8:
+            case 9:
+            case 10:
+            case 11:
+                console.log(`좋은 아침입니다`);
+                break;
+        
+
+        case 12:
+        case 13:
+        case 14:
+        case 15:
+        case 16:
+        case 17:
+                console.log(`좋은 오후입니다`);
+                break;
+        
+        case 18:
+        case 19:
+        case 20:
+        case 21:
+                console.log(`좋은 저녁입니다`);
+                break;
+        
+         default:
+            console.log("좋은 밤입니다");
+        }
+
+
+
+        let time2 = 22;
+        
+        if (time2 < 0 || time2 > 23)
+        {console.log("유효하지 않은 시각입니다.");}
+
+        else if (time2 >= 5 && time2 <= 11)
+        {console.log("좋은 아침입니다");}
+        
+        else if (time2 >= 12 && time2 <= 17)
+        {console.log("좋은 오후입니다");}
+        
+        else if (time2 >= 18 && time2 <=21)
+        {console.log("좋은 저녁입니다");}
+        
+        else {console.log("좋은 밤입니다");}
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

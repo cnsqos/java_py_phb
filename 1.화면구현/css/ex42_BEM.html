@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Block */
+        .card{
+            border : 1px solid #ddd;
+            border-radius : 10px;
+            padding : 16px;
+            width: 250px;
+            margin : 20px auto;
+            font-family :sans-serif;
+        }
+
+        /* Element */
+        .card__title{
+            font-size : 20px;
+            font-weight: bold;
+            margin-bottom : 10px;
+        }
+
+        .card__content{
+            color : #555;
+        }
+
+        /* Modifier */
+
+        .card--highlight{
+            background : #f8e5c5;
+            border-color : #f39c12;
+        }
+    </style>
+</head>
+<body>
+    <div class="card card--highlight">
+        <div class="card__title">공지사항</div>
+        <div class="card__content">다음 주 휴강합니다.</div>
+    </div>
+</body>
+</html>

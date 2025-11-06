@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 너비 150px;
+        배경색
+        글씨색
+        안쪽여백 10px
+        글씨 가운데 정렬
+        테두리 둥글게 */
+        /* 부모 요소에 display flex를 주게 되면 자식 요소들이 좌에서 우로 배치된다. */
+        .container{
+            display:flex;
+            align-items: flex-start;
+        }
+        .box{
+            width: 150px;
+            margin-bottom : 10px;
+            background: #0ff;
+            padding : 10px;
+            text-align: center;
+            border-radius : 10px;
+            margin : 20px;
+        }
+        /* 내용이 많으면 넘친다
+        높이가 고정 */
+        .fixed{
+            height : 100px;
+        }
+        .min{
+            min-height : 100px;
+        }
+        /* overflow :
+        hidden 넘치면 가림
+        auto 넘치면 스크롤 만들어줌 */
+        .max{
+            max-height : 100px;
+            overflow : hidden;
+        }
+        .auto{
+            height : auto;
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>height속성 실습</h1>
+    <div class="container">
+        <div class="box fixed">잔곤 깸마버빙히는 은셔겨는 샌겨통치징이어서 다거드미나를. 빅안 겨배다에, 뿌</div>
+        <div class="box min">밨듸도 랏가 싶헤나나ㅏ나나나ㅏ나나나나나나나ㅏㅏㅏ나히에혀 홀애무팍욂 라사갈던 사다.</div>
+        <div class="box max">밨듸도 랏게가 녓해탄은, 자메의 몀안틘대 여초가 싶헤히느뤼헥에혀 홀애무팍욂 라사갈던 사다.</div>
+        <div class="box auto">밨듸도 랏게가 녓해탄은, 자메의 몀안틘대 여초가 싶헤히느뤼헥에혀 홀애무팍욂 라사갈던 사다.</div>
+    </div>
+</body>
+</html>

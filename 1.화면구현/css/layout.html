@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .container{
+        background: #6af771;
+        color : white;
+        padding : 5px;
+        display:flex;
+        justify-content: center;
+    }
+    .a{
+        background: #4e664f;
+        color : rgb(253, 248, 248);
+        display:flex;
+        justify-content:center;
+        gap : 20px;
+    }
+
+    main{
+        background: rgb(136, 128, 128);
+        display:flex;
+        justify-content: center;
+    }
+
+    section{
+        background: rgb(136, 128, 128);
+        display:flex;
+        justify-content: center;
+        flex-grow:7;
+    }
+
+    aside{
+        background: rgb(136, 128, 128);
+        display:flex;
+        justify-content: center;
+        flex-grow:3;
+    }
+
+
+    .cards{
+        display: flex;
+        gap: 20px;
+    }
+
+    .big{
+        background: #d1d1d1;
+        padding: 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+        flex-grow : 7;
+    }
+    .small{
+        background: skyblue;
+        padding: 20px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-align: center;
+        flex-grow : 3;
+    }
+    .copy{
+        background: rgb(103, 103, 165);
+        color : white;
+        text-align: center;
+        padding : 15px;
+    }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Flexbox Layout 연습</h1>
+        </div>
+        <nav>
+            <div class="a">홈</a>
+            <div class="a">공지사항</a>
+            <div class="a">문의</a>
+        </nav>
+
+        <main>
+            <section>
+                <div class="cards">
+                    <div class="big">
+                        <h2>메인 콘텐츠</h2>
+                        <p>이 영억은 본문 내용을 표시하는 구역이다.</p>
+                        <p>Flexbox를 이용해 왼쪽에 배치된다.</p>
+                    </div>
+                </div>
+            </section>
+    
+            <aside>
+                <div class="cards">
+                    <div class="small">
+                        <h2>사이드바</h2>
+                        <p>보조 정보나 공지사항을 표시하는 구역이다.</p>
+                    </div>
+                </div>
+            </aside>
+
+        </main>
+    </header>
+    
+    <footer>
+        <div class="copy">
+            &copy; 2025 Flex Layout Practice
+        </div>
+        
+    </footer>
+    
+</body>
+</html>

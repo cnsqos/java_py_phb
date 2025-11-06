@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .s{
+        text-align: center;
+    }
+    
+    .btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: #fff;
+    transition: opacity 0.2s;
+    }
+
+    .btn__text {
+        font-weight: 500;
+    }
+
+
+    .btn--success {
+        background-color: #0dac9e;
+    }
+
+    .btn--disabled {
+        background-color: #e65238;
+        cursor: not-allowed;
+        opacity: 0.8;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="s">
+        <h2>BEM 버튼 컴포넌트 예제</h2>
+    </div>
+        
+    <div class="btn--success"></div>
+    <div class="btn__icon"></div>
+
+       
+    <!-- ✅ 성공 버튼 -->
+    <button class="btn btn--success">
+        <span class="btn__text">확인</span>
+    </button>
+
+    <!-- 🚫 비활성화 버튼 -->
+    <button class="btn btn--disabled">
+        <span class="btn__text">비활성</span>
+    </button>
+
+</body>
+</html>

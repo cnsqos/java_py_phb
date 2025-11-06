@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+ <style>
+  /* 공통 설정 */
+		* {
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		}
+		body {
+		  font-family: system-ui, sans-serif;
+		  text-align: center;
+		}
+		
+		/* 영역 스타일 */
+		header {
+		  background-color: #2ecc71;
+		  color: white;
+		  padding: 20px;
+		}
+		
+		nav {
+		  background-color: #27ae60;
+		  color: white;
+		  padding: 10px;
+		}
+		
+		nav ul {
+		  list-style: none;
+		  display: flex;
+		  justify-content: center;
+		  gap: 20px;
+		}
+		
+		/* 메인 영역 */
+		main {
+		  display: flex;
+		  gap: 20px;
+		  padding: 20px;
+		  background-color: #ecf0f1;
+		}
+		
+		/* 본문과 사이드 비율 */
+		section {
+		  flex: 7;
+		  background-color: #ffffff;
+		  padding: 20px;
+		  border-radius: 8px;
+		}
+		
+		aside {
+		  flex: 3;
+		  background-color: #dfe6e9;
+		  padding: 20px;
+		  border-radius: 8px;
+		}
+		
+		/* 푸터 */
+		footer {
+		  background-color: #34495e;
+		  color: white;
+		  padding: 20px;
+		}
+		</style>
+</head>
+<body>
+  <header>
+    <h1>Flexbox Layout 연습</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li>홈</li>
+      <li>공지사항</li>
+      <li>문의</li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>메인 콘텐츠</h2>
+      <p>이 영역은 본문 내용을 표시하는 구역이다.</p>
+      <p>Flexbox를 이용해 왼쪽에 배치된다.</p>
+    </section>
+
+    <aside>
+      <h2>사이드바</h2>
+      <p>보조 정보나 공지사항을 표시하는 구역이다.</p>
+    </aside>
+  </main>
+
+  <footer>
+    <p>© 2025 Flex Layout Practice</p>
+  </footer>
+</body>
+</html>
