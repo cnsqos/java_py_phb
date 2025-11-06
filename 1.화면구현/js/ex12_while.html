@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+
+        let i = 0; // 초기식
+
+        while(i < 3){
+            console.log(i);
+            i++; // 증감식 (증감식을 쓰지 않으면 초기식 변수의 값이 바뀌지 않기 때문에 무한loop에 걸린다.)
+        }
+
+        // while문은 보통 몇 회를 반복해야 할지 정확히 모를 때 사용하는 경우가 많다.
+
+        // 탈출 키워드
+        // break : 반복을 종료
+        // continue : 실행하다가 continue를 만나면 다음 반복으로 넘어간다.
+
+        let num = 0;
+        while (num < 1000){
+            if(num >= 100){
+                break;
+            }
+            num++;
+        }
+
+        
+        for(let i = 1; i <5; i++){
+            if(i % 2===0){
+                continue;
+            }
+            console.log(i);            
+        }
+
+        // 조건식에 true를 넣으면 일반적인 방법으로는 멈출수가 없다.
+        let x = 0;
+        while(true){
+            console.log(x);
+            x++;
+            if(x >= 10){
+                break;
+            }
+        }
+
+        console.log(x); //10
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
