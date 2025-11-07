@@ -18,7 +18,65 @@
         // 2. new Object()생성자
         // 비어있는 객체를 생성
         let dog = new Object();
+
+
+        // 코리아 학생 객체
+        // 이름, 나이, 전화번호, 듣는 과목, 수료 여부(t/f)
+        let kor = {
+            name : "cnsqo",
+            age : "40",
+            phone : "010-1234-1234",
+            subject : ["Java&Python 풀스택, React기반 풀스택"],
+            completention : false
+        }
+
+        // 객체에 들어있는 값을 꺼내기
+        // 변수명.키
+        console.log(kor.name);
+        // 변수명["키"]
+        console.log(kor["name"]);
+        // console.log(kor[name]); X -> 키를 항상 문자열로 묶어야 됩니다.
         
+        // 프로퍼티에 들어있는 value를 수정하기
+        kor.name = "cnsqo";
+        console.log(kor.name);
+
+        // 객체에 없는 프로퍼티도 추가할 수 있다.
+        kor.height = 170.5;
+        console.log(kor.height);
+
+        //객체에서 프로퍼티 삭제하기
+        delete kor.height;
+        console.log(kor.height);
+
+        console.log('height' in kor);
+        console.log(`이름 존재 여부 : ${'name' in kor}`);
+
+        //for in
+        //객체를 순회하면서 모든 프로퍼티의 키를 변수에 담아서 준다.
+
+        for(const k in kor){
+            console.log(`key = ${k} / value = ${kor[k]}`)
+        }
+        
+        // 생성자
+        // 객체를 생성하는 특수한 기능을 가진 함수
+        // 원래 함수 이름은 소문자로 시작
+        // 생성자는 대문자로 시작
+        // this : 생성자를 호출한 객체를 의미한다
+        
+        function User(name,age){
+            this.name = name;
+            this.age= age;            
+            console.log(this);
+        }
+
+        // 생성자의 사용
+        let u1 = new User("홍길동",20);
+
+        // 이름과 나이를 출력
+        console.log(`이름 : ${u1.name} / 나이 : ${u1.age}`);
+
     </script>
 </head>
 <body>
