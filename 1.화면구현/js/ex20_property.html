@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button class="btn">Click me</button>
+    <script>
+        // 객체에서 프로퍼티는 key:value로 이루어진 한 쌍
+        // 객체에 없는 key를 사용하면 객체에 추가가 됐다.
+        let btn = document.querySelector(".btn");
+
+        // btn에 onclick이라는 프로퍼티는 없음
+        // js문법에 의해 btn객체에 추가가 됨
+        btn.onclick = function(){
+            alert("버튼 클릭1");
+        }
+
+        // 기능이 두개 달리게 되면 나중에 작성한게 적용이 된다.
+        btn.onclick = function(){
+            alert("버튼 클릭2");
+        }
+    </script>
+</body>
+</html>

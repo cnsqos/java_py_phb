@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+    </script>
+</head>
+<body>
+    <button id="myButton">클릭</button>
+    <script>
+        let button = document.querySelector("#myButton");
+        // addEventListener : 브라우저에서의 이벤트를 처리하기 위해 요소에 이벤트 리스너를 붙이는 표준 방법이다.
+        // 리스너(핸들러) : 이벤트가 일어났을 때 그에 반응해서 실행되는 함수(기능)
+        // 등록 : 요소(element)에 리스너를 붙이는 행위
+        // addEventListener(이벤트, 기능)
+        button.addEventListener("click", function(){
+        alert("버튼이 클릭되었습니다.");
+        })
+
+        // 화살표 함수로 변경
+        button.addEventListener("click", () => alert("버튼이 클릭되었습니다."));
+
+        // 이벤트의 종류
+        // click, dbclick, mouseup, mousemove, mouseenter, mouseleave
+        // keydown, keyup
+        // input, change, submit, focus, blur
+
+    </script>
+</body>
+</html>
