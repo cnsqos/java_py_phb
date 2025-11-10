@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    단: <input id="dan"> 
+    <input type="button" id="gugu" value="계산시작">
+    <input type="button" id="c_disp" value="숨기기">
+    <hr>
+    <div id="disp">
+        여기에 구구단
+    </div>
+    <script>
+        let calc_btn = document.querySelector("#gugu");//계산시작
+        let c_disp = document.querySelector("#c_disp");
+
+        let gugudan = () => {
+            //input태그의 value를 대입
+            let dan = document.querySelector("#dan").value;
+
+            //비어있는 값을 실행하려 할 때
+            if(dan == ''){
+                alert("값을 입력해야 합니다.");
+                return; //함수를 즉시 종료하고 빠져나간다.
+            }
+
+            //2단보다 작거나 9단보다 큰 숫자를 입력했을 경우
+            //2~9 사이만 입력해주세요라고 alert 띄우기
+            if(dan < 2 || dan > 9){
+                alert("2~9사이만 입력해주세요");
+                return;
+            }
+
+            let str = "";
+            for(let i = 1; i <10; i++){
+                str += `${dan} X ${i} = ${dan * i} <br>`; 
+            }
+
+            let disp = document.querySelector("#disp");
+            disp.innerHTML = str;
+        }
+
+        calc_btn.addEventListener("click", gugudan);
+
+        let b_show = true;
+
+        let show = () => {
+            b_show = !b_show;//true -> false, false -> true
+            c_disp.value = b_show ? "숨기기" : "보이기";
+            let disp = document.querySelector("#disp");
+            disp.style.display = b_show ? 'block' : 'none';
+        }
+
+        c_disp.addEventListener("click",show);
+    </script>
+</body>
+</html>

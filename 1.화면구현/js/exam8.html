@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <!-- 버튼을 누를 때마다 숫자가 증가하는 카운터 만들기 -->
+     <button id="btnCount">증가시키기</button>
+     <p id="result">0</p>
+
+     <script>
+        // 이벤트가 일어나는 주체가 어디인가??->버튼
+        let btn = document.querySelector("#btnCount");
+
+        // 이벤트의 처리를 당하는 대상
+        let counter = document.querySelector("#result");
+       
+        // 이벤트가 일어 났을 때 뭐할건데? -> p태그에 있는 값을 증가
+        let count = 1;
+        btn.addEventListener("click",() => {
+            counter.innerText = count++;
+        });
+
+        // 화살표 함수 function 키워드도 없고, 함수 이름도 없다.
+        // 함수를 하나의 식처럼 만들어서 변수에 저장하고 사용
+
+        let btn_counter = () => counter.innerText = count++;
+
+        btn.addEventListener("click",btn_counter);
+
+     </script>
+</body>
+</html>

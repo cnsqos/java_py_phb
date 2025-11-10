@@ -29,5 +29,33 @@
         // input, change, submit, focus, blur
 
     </script>
+    <hr>
+    <input type="button" id="target1" value="button1">
+    <input type="button" id="target2" value="button2">
+
+    <script>
+        // 버튼 2개 선택하기
+        let t1 = document.querySelector("#target1");
+        let t2 = document.querySelector("#target2");
+
+        // 매개변수에 들어오는 내용
+        // 이벤트가 일어난 요소
+        function btn_listener(event){
+            // event.target.id : 이벤트가 일어난 타겟의 id
+            switch(event.target.id){
+                case 'target1':
+                    alert(1);
+                    break;
+                case 'target2':
+                    alert(2);
+                    break;
+            }
+        }
+
+        // 원래는 함수를 호출할 때 함수명()를 하는게 맞는데
+        // 이벤트 리스너에서 함수를 호출할 때는 ()를 안 붙인다.
+        t1.addEventListener("click",btn_listener);
+        t2.addEventListener("click",btn_listener);
+    </script>
 </body>
 </html>
