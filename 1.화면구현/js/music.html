@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<body>
+  <h2>🎵 음악 검색 (iTunes API)</h2>
+
+  <input id="search" placeholder="검색어 입력 (예: BTS)">
+  <button id="btn">검색</button>
+  <ul id="result"></ul>
+ </body>
+ <script>
+    let btn = document.querySelector("#btn");
+    
+    let list = document.querySelector("#result");
+
+    //버튼에 클릭 이벤트가 발생했을 때
+    btn.addEventListener("click", () => {
+        //input태그에 적힌 내용을 가져온다.
+        let keyword = document.querySelector("#search").value;
+
+        //아이튠즈 api에 키워드에 대한 내용조회를 요청한다.
+        fetch(`https://itunes.apple.com/search?term=${keyword}&entity=song&limit=5`)
+            .then(res => {
+                if(!res.ok){
+                    throw new Error("검색 실패");
+                }
+                return res.json();
+            })
+            .then(data => {
+                //가져온 데이터가 있다면 map을 통해서 노래 - 가수 형식으로 만들어서 배열로 저장
+                //join()을 통해서 하나의 문자열로 만든다
+                const arr = data.results.length ?
+                    data.results.map(item =>
+                        `<li>${item.trackName} - ${item.artistName}</li>`
+                    ).join("") : "<li>검색 결과 없음</li>"
+                
+                //얻어온 결과를 <ul>에 넣는다.
+                list.innerHTML = arr;
+            })
+            .catch(err =>{
+                console.error("에러:",err);
+                alert("검색 중 문제가 발생했습니다.");
+            });
+    })
+ </script>
+</html>
+  </script>
+ </body>
+</html>
+

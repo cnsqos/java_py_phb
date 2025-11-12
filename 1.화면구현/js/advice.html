@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <p id="advice"></p>
+    <button id="btn" onclick="click()"> 명언 가져오기 </button>
+
+    <script>
+
+        let btn = document.querySelector("#btn");
+
+        function click() {
+            //명언주세요~
+            fetch("https://api.adviceslip.com/advice")
+            .then(res => {
+                if(!res.ok) { //요청이 잘 됐으면 true / false
+                    throw new Error("요청실패");
+                }
+                return res.json(); //얻어온 결과를 json으로 변환
+            })
+            .then(data => {
+                //p 태그에 명언을 추출해서 넣는다.
+                document.querySelector("#advice").innerText = data.slip.advice;
+            })
+            .catch(err => {
+                console.error("에러:" + err);
+                alert("데이터를 가져오는데 실패했다.");
+            })
+        }
+
+    </script>
+</body>
+</html>
