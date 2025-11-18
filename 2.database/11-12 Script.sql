@@ -34,6 +34,7 @@ create table TBL_MEMBER(
 	age int -- 마지막에는 콤마를 찍지 않습니다.
 );
 
+
 select * from tbl_member;
 
 #제약조건과 함께 테이블 생성해보기
