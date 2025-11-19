@@ -2,7 +2,7 @@
 <application:Application xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:advanced="http://www.eclipse.org/ui/2010/UIModel/application/ui/advanced" xmlns:application="http://www.eclipse.org/ui/2010/UIModel/application" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="__z_50cUlEfCuXvPC_ZSOlg" elementId="org.eclipse.e4.legacy.ide.application" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="__z_50sUlEfCuXvPC_ZSOlg" bindingContexts="__z_528UlEfCuXvPC_ZSOlg">
   <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;workbench>&#xD;&#xA;&lt;mruList/>&#xD;&#xA;&lt;/workbench>"/>
   <tags>activeSchemeId:org.eclipse.ui.defaultAcceleratorConfiguration</tags>
-  <children xsi:type="basic:TrimmedWindow" xmi:id="__z_50sUlEfCuXvPC_ZSOlg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="___YDYsUlEfCuXvPC_ZSOlg" label="%trimmedwindow.label.eclipseSDK" x="601" y="163" width="1024" height="768">
+  <children xsi:type="basic:TrimmedWindow" xmi:id="__z_50sUlEfCuXvPC_ZSOlg" elementId="IDEWindow" contributorURI="platform:/plugin/org.eclipse.platform" selectedElement="___YDYsUlEfCuXvPC_ZSOlg" label="%trimmedwindow.label.eclipseSDK" x="466" y="162" width="1024" height="766">
     <persistedState key="coolBarVisible" value="true"/>
     <persistedState key="perspectiveBarVisible" value="true"/>
     <persistedState key="isRestored" value="true"/>
@@ -50,10 +50,6 @@
           <tags>persp.newWizSC:org.eclipse.wst.css.ui.internal.wizard.NewCSSWizard</tags>
           <tags>persp.showIn:org.eclipse.terminal.view.ui.TerminalsView</tags>
           <tags>persp.newWizSC:org.eclipse.wst.jsdt.ui.NewJSWizard</tags>
-          <tags>persp.editorOnboardingText:Open a file or drop files here to open them.</tags>
-          <tags>persp.editorOnboardingCommand:Find Actions$$$Ctrl+3</tags>
-          <tags>persp.editorOnboardingCommand:Show Key Assist$$$Ctrl+Shift+L</tags>
-          <tags>persp.editorOnboardingCommand:New$$$Ctrl+N</tags>
           <tags>persp.perspSC:org.eclipse.debug.ui.DebugPerspective</tags>
           <tags>persp.perspSC:org.eclipse.jdt.ui.JavaPerspective</tags>
           <tags>persp.perspSC:org.eclipse.ui.resourcePerspective</tags>
@@ -81,6 +77,10 @@
           <tags>persp.newWizSC:org.eclipse.jst.jsp.ui.internal.wizard.NewJSPWizard</tags>
           <tags>persp.newWizSC:org.eclipse.jpt.jpa.ui.wizard.newJpaProject</tags>
           <tags>persp.perspSC:org.eclipse.jpt.ui.jpaPerspective</tags>
+          <tags>persp.editorOnboardingText:Open a file or drop files here to open them.</tags>
+          <tags>persp.editorOnboardingCommand:Find Actions$$$Ctrl+3</tags>
+          <tags>persp.editorOnboardingCommand:Show Key Assist$$$Ctrl+Shift+L</tags>
+          <tags>persp.editorOnboardingCommand:New$$$Ctrl+N</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_AIkbocUmEfCuXvPC_ZSOlg" selectedElement="_AIkbrsUmEfCuXvPC_ZSOlg" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_AIkbosUmEfCuXvPC_ZSOlg" elementId="topLeft" containerData="2000" selectedElement="_AIkbo8UmEfCuXvPC_ZSOlg">
               <children xsi:type="advanced:Placeholder" xmi:id="_AIkbo8UmEfCuXvPC_ZSOlg" elementId="org.eclipse.ui.navigator.ProjectExplorer" ref="_AIfjIMUmEfCuXvPC_ZSOlg" closeable="true">
@@ -258,9 +258,10 @@
     <sharedElements xsi:type="basic:Part" xmi:id="_AIfjIMUmEfCuXvPC_ZSOlg" elementId="org.eclipse.ui.navigator.ProjectExplorer" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Project Explorer" iconURI="platform:/plugin/org.eclipse.ui.navigator.resources/icons/full/eview16/resource_persp.svg" tooltip="" closeable="true">
       <persistedState key="originalCompatibilityViewClass" value="org.eclipse.ui.navigator.resources.ProjectExplorer"/>
       <persistedState key="originalCompatibilityViewBundle" value="org.eclipse.ui.navigator.resources"/>
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view CommonNavigator.LINKING_ENABLED=&quot;0&quot; currentWorkingSetName=&quot;Aggregate for window 1763542747413&quot; org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets=&quot;0&quot;>&#xD;&#xA;&lt;lastRecentlyUsedFilters/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_AQV3kMUmEfCuXvPC_ZSOlg" elementId="org.eclipse.ui.navigator.ProjectExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -437,7 +438,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_AAmycMUmEfCuXvPC_ZSOlg" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_AApOsMUmEfCuXvPC_ZSOlg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.svg" tooltip="Print" command="__0gQIsUlEfCuXvPC_ZSOlg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_qLc8t8UoEfCYIaMwldePKg" elementId="print" visible="false" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.svg" tooltip="Print" command="__0gQIsUlEfCuXvPC_ZSOlg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_AAmyccUmEfCuXvPC_ZSOlg" elementId="group.edit" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -445,8 +446,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_AAmyc8UmEfCuXvPC_ZSOlg" elementId="org.eclipse.ui.workbench.edit">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_AApOtsUmEfCuXvPC_ZSOlg" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.svg" tooltip="Undo" enabled="false" command="__0ebIcUlEfCuXvPC_ZSOlg"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_AAp1wMUmEfCuXvPC_ZSOlg" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.svg" tooltip="Redo" enabled="false" command="__0fCIMUlEfCuXvPC_ZSOlg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_qLc8vcUoEfCYIaMwldePKg" elementId="undo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/undo_edit.svg" tooltip="Undo" enabled="false" command="__0ebIcUlEfCuXvPC_ZSOlg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_qLc8vsUoEfCYIaMwldePKg" elementId="redo" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/redo_edit.svg" tooltip="Redo" enabled="false" command="__0fCIMUlEfCuXvPC_ZSOlg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_AAmydMUmEfCuXvPC_ZSOlg" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -473,7 +474,7 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_AAmyeMUmEfCuXvPC_ZSOlg" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_AAp1xsUmEfCuXvPC_ZSOlg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.svg" tooltip="Pin Editor" enabled="false" type="Check" command="__0fpasUlEfCuXvPC_ZSOlg"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_qLmtsMUoEfCYIaMwldePKg" elementId="org.eclipse.ui.window.pinEditor" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.svg" tooltip="Pin Editor" enabled="false" type="Check" command="__0fpasUlEfCuXvPC_ZSOlg"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_AAmyecUmEfCuXvPC_ZSOlg" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
