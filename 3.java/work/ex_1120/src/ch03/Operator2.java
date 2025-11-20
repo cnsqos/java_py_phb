@@ -45,5 +45,39 @@ public class Operator2 {
 		
 		boolean result3 = (limit-age) >=5 && age >30;
 		System.out.println("&&연산 결과 : " + result3);
+		
+		//비트 논리 연산자
+		//2진수 차원의 논리 연산자
+		//피연산자가 1,0 이라는 것과 산출된 결과가 1,0 이라는 것
+		//1 ->true, 0 -> false
+		// & 두 항이 모두 1이면 true, 아니면 false
+		// | 둘 중 하나라도 1이면 true, 아니면 false
+		// ^ 두 항이 달라야 true, 같으면 false
+		// ~ 1을 0으로, 0을 1로 만든다.
+		
+		int a = 10; // 이진수 : 1010 -> 00000000 00000000 00000000 00001010
+		int b = 7; // 이진수 : 0111
+		
+		//8bit -> 1byte
+		//int -> 4byte -> 32 bit 
+		
+		int c = a & b; //0010
+		System.out.println(c);
+		
+		c = a | b; //1111
+		System.out.println(c);
+		
+		c = a ^ b; //1101
+		System.out.println(c);
+		
+		// 2진수는 음수를 표현할 수 없다
+		// 비트의 맨 앞자리는 수의 표현이 아닌 부호의 표현으로 쓰기로 약속을 했다.
+		// 1이면 음수, 0이면 양수
+		
+		int i1 = 7;
+		System.out.println(~i1); // -(7+1);
+		
+		int result1= i1 << 1;
+		System.out.println(result);
 	}
 }
