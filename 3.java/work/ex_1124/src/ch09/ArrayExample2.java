@@ -65,13 +65,14 @@ public class ArrayExample2 {
   
 		int temp = 0;
 
-		for(int i = arr.length - 1; i > 0; i--) {
-			for(int j = 0; j < i; j++) {				
+		for(int i = arr2.length - 1; i > 0; i--) {
+			for(int j = 0; j < i; j++) {
+				//앞의 값이 뒤의 값보다 크다면
 			if(arr2[j] > arr2[j+1]) {
-					temp = arr[j+1];
+					temp = arr2[j+1];
 					arr2[j+1] = arr2[j];
 					arr2[j] = temp;
-				}
+				} 
 			}
 		}
 
