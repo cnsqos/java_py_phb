@@ -14,12 +14,16 @@ public class Main {
 		student.introduce();
 
 		
-		
-		
-		
 		CalPlus cp = new CalPlus();
-		cp.getResult(30, 15);
+		System.out.println("CalPlus : " + cp.getResult(20, 10));
 	    
-	        
+		CalMinus cm = new CalMinus();
+		System.out.println("CalMinus : " + cm.getResult(20, 10));
+		
+		
+		HybridWaterCar hwc = new HybridWaterCar(15, 30, 25);
+        hwc.showCurrentGague();
+		
+		
 	}
 }
