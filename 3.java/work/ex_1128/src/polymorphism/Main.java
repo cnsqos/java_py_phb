@@ -31,7 +31,32 @@ public class Main {
         Taxi taxi = new Taxi();
         driver.drive(taxi);
         driver.drive(new Taxi());
-      
-    }
+        
+        
+//    	Main클래스 만든다.
+//    	길이가 3인 Animal타입의 배열 zoo를 만든다.
+//    	0번에는 Animal 객체
+//    	1번에는 Dog객체
+//    	2번에는 Cat객체를 넣는다.
+    //
+//    	for문을 돌면서 sound()를 모두 호출한다.
+        
+        
+        Animal[] zoo = {new Animal(), new Dog(), new Cat()};
+        
+        for (Animal a : zoo) {
+            a.sound();
+        }
+        
+        
+        AnimalTrainer trainer = new AnimalTrainer(); 
+        
+        trainer.train(new Dog());
+        trainer.train(new Cat());
+        
+        
+    }        
+}        
+ 
 	
-}
+
