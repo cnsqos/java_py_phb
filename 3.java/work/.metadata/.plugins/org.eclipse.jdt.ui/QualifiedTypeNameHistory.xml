@@ -21,5 +21,8 @@
     <fullyQualifiedTypeName name="lombok.NoArgsConstructor"/>
     <fullyQualifiedTypeName name="lombok.AllArgsConstructor"/>
     <fullyQualifiedTypeName name="lombok.Getter"/>
+    <fullyQualifiedTypeName name="ex_interface.Printtable"/>
+    <fullyQualifiedTypeName name="ex_interface.Exportable"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
+    <fullyQualifiedTypeName name="ex_interface.MySQLOrderRepository"/>
 </qualifiedTypeNameHistroy>
