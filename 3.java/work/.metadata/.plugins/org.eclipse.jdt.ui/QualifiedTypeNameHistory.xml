@@ -23,6 +23,9 @@
     <fullyQualifiedTypeName name="lombok.Getter"/>
     <fullyQualifiedTypeName name="ex_interface.Printtable"/>
     <fullyQualifiedTypeName name="ex_interface.Exportable"/>
-    <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="ex_interface.MySQLOrderRepository"/>
+    <fullyQualifiedTypeName name="inner_class.Outer.Inner"/>
+    <fullyQualifiedTypeName name="pack1.A"/>
+    <fullyQualifiedTypeName name="pack2.B"/>
+    <fullyQualifiedTypeName name="java.lang.Override"/>
 </qualifiedTypeNameHistroy>
