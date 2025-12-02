@@ -1,5 +1,6 @@
-module my_application_2 {
-	//requires : 모듈을 컴파일하거나 실행할 때 필요한 의존 모듈을 지정한다.
-	requires my_module_a;
-	requires my_module_b;
+module my_module_b {
+	//exports : 모듈이 가지고 있는 패키지를 외부에서 사용할 수 있도록
+	//노출시키는 역할
+	exports pack3;
+	exports pack4;
 }

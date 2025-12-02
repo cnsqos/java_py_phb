@@ -6,6 +6,6 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
-	<classpathentry kind="lib" path="C:/Users/admin/Desktop/java_py_phb/3.java/work/my_lib/dist/my_lib.jar"/>
+	<classpathentry kind="lib" path="C:/Users/admin/Desktop/java_py_lhj/3.java/work/my_lib/dist/my_lib.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
