@@ -7,7 +7,6 @@
     <fullyQualifiedTypeName name="com.hankook.Tire"/>
     <fullyQualifiedTypeName name="com.hankook.SnowTire"/>
     <fullyQualifiedTypeName name="package1.B"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="getter_setter.Score"/>
     <fullyQualifiedTypeName name="overriding.HybridWaterCar"/>
     <fullyQualifiedTypeName name="lombok.Setter"/>
@@ -24,7 +23,6 @@
     <fullyQualifiedTypeName name="pack1.A"/>
     <fullyQualifiedTypeName name="pack2.B"/>
     <fullyQualifiedTypeName name="ex_object.SmartPhone"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
     <fullyQualifiedTypeName name="jdk.internal.org.jline.terminal.TerminalBuilder.SystemOutput"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
@@ -37,4 +35,10 @@
     <fullyQualifiedTypeName name="java.awt.List"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="try_catch.Try_catch1"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.InputMismatchException"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
 </qualifiedTypeNameHistroy>
