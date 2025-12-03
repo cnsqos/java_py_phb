@@ -36,8 +36,8 @@
 		<item key="create_package_info_java" value="false"/>
 	</section>
 	<section name="NewClassCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="1025"/>
-		<item key="DIALOG_Y_ORIGIN" value="130"/>
+		<item key="DIALOG_X_ORIGIN" value="1082"/>
+		<item key="DIALOG_Y_ORIGIN" value="151"/>
 		<item key="DIALOG_WIDTH" value="575"/>
 		<item key="DIALOG_HEIGHT" value="659"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
@@ -100,8 +100,8 @@
 		<item key="pageIndex" value="1"/>
 	</section>
 	<section name="NewInterfaceCreationWizard.dialogBounds">
-		<item key="DIALOG_X_ORIGIN" value="709"/>
-		<item key="DIALOG_Y_ORIGIN" value="182"/>
+		<item key="DIALOG_X_ORIGIN" value="975"/>
+		<item key="DIALOG_Y_ORIGIN" value="180"/>
 		<item key="DIALOG_WIDTH" value="580"/>
 		<item key="DIALOG_HEIGHT" value="543"/>
 		<item key="DIALOG_FONT_NAME" value="1|맑은 고딕|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|맑은 고딕"/>
