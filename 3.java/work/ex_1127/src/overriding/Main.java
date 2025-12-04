@@ -5,24 +5,20 @@ public class Main {
 		int r = 10;
 		
 		Calculator cal = new Calculator();
-		cal.areaCircle(r);
-
-		Computer c = new Computer();
-		c.areaCircle(r);
-
-		Student student = new Student();
-		student.introduce();
-
+		cal.areaCircle(r);//부모클래스에 있는 메서드 실행
+		
+		Computer c= new Computer();
+		c.areaCircle(r);//오버라이딩된 메서드가 실행
 		
 		CalPlus cp = new CalPlus();
-		System.out.println("CalPlus : " + cp.getResult(20, 10));
-	    
+		System.out.println("CalPlus : " + cp.getResult(10, 20));
+		
 		CalMinus cm = new CalMinus();
-		System.out.println("CalMinus : " + cm.getResult(20, 10));
+		System.out.println("CalMinus : " + cm.getResult(30, 15));
 		
 		
-		HybridWaterCar hwc = new HybridWaterCar(15, 30, 25);
-        hwc.showCurrentGague();
+		
+		
 		
 		
 	}

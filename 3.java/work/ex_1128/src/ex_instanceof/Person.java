@@ -10,13 +10,4 @@ public class Person {
 	public void walk() {
 		System.out.println("걷는다.");
 	}
-	
-	
-	
-	
-	
-	
-	
-	
-	
 }

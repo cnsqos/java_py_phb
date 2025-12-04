@@ -8,9 +8,8 @@ public class Student extends Person{
 		super(name);
 		this.studentNo = studentNo;
 	}
-
+	
 	public void study() {
 		System.out.println("공부를 한다.");
 	}
-	
 }

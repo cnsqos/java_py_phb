@@ -15,5 +15,16 @@ public class WrapperExample {
 		
 		System.out.println(obj2 == obj3); //객체는 주소를 비교하기 때문에 false
 		System.out.println(obj2.equals(obj3));
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }

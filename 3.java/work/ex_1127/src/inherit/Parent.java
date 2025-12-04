@@ -1,7 +1,7 @@
 package inherit;
 
 public class Parent {
-	int p = 10;
+	int p;
 	
 	public Parent(int p) {
 		this.p = p;

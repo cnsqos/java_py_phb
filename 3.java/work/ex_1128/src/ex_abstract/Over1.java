@@ -1,12 +1,12 @@
 package ex_abstract;
 
 public class Over1 {
-    public static void main(String[] args) {
-           ovr a1 = new ovr1();      
-           ovr a2 = new ovr2();      
-           System.out.println(a1.sun(3, 2) + a2.sun(3, 2)); //5+6=11
-           
-       }
+	 public static void main(String[] args) {
+	        ovr a1 = new ovr1();      
+	        ovr a2 = new ovr2();      
+	        System.out.println(a1.sun(3, 2) + a2.sun(3, 2));
+	        //출력문을 통해 나오는 값을 계산하시오.
+	    }
 }
 
 class ovr {
@@ -16,55 +16,15 @@ class ovr {
 }
 
 class ovr1 extends ovr {
+	@Override
     int sun(int x, int y) {
-        return x + y;  // 그냥 덧셈 유지
+        return x + y;
     }
 }
 
 class ovr2 extends ovr1 {
+	@Override
     int sun(int x, int y) {
-        return x - y + super.sun(x, y);  // → 3 - 2 + (3 + 2) = 1 + 5 = 6
+        return x - y + super.sun(x, y);
     }
-    
-//    -------------------------------
-    class Parent {
-        int x = 100;
-
-        Parent() {
-            this(500);        
-        }
-
-        Parent(int x) {
-            this.x = x;       
-        }
-
-        int getX() {
-            return x;         
-        }
-    }
-
-    class Child extends Parent {
-        int x = 4000;
-
-        Child() {
-            this(5000);       
-        }
-
-        Child(int x) {
-            this.x = x;      
-        }
-    }
-
-    public class Main {
-        public static void main(String[] args) {
-            Child obj = new Child();
-            System.out.println(obj.getX()); //500
-        }
-    }
-    
-    
-    
-    
-    
-    
 }

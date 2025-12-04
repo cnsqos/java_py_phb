@@ -1,7 +1,7 @@
 package ex_final;
 
 public class Car {
-	
+
 	int speed;
 	
 	public void speedUp() {
@@ -11,6 +11,5 @@ public class Car {
 	public final void stop() {
 		System.out.println("차를 멈춤");
 		speed = 0;
-		
 	}
 }

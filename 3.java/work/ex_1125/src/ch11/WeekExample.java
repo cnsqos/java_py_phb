@@ -1,5 +1,6 @@
 package ch11;
 
+import java.time.DayOfWeek;
 import java.util.Calendar;
 
 public class WeekExample {
@@ -13,8 +14,6 @@ public class WeekExample {
 		//오늘의 요일 얻기
 		int week = cal.get(Calendar.DAY_OF_WEEK);
 		
-		System.out.println(week);
-		
 		switch(week) {
 		case 1:
 			today = Week.SUNDAY;
@@ -26,7 +25,7 @@ public class WeekExample {
 			today = Week.TUESDAY;
 			break;
 		case 4:
-			today = Week.WEDNESDAY;
+			today = Week.WENDSDAY;
 			break;
 		case 5:
 			today = Week.THURSDAY;
@@ -45,7 +44,16 @@ public class WeekExample {
 			System.out.println("열심히 자바를 공부합니다.");
 		}
 		
-
+		
+		//열거형을 직접 만들어서 쓸 일은 크게 많지 않다.
+		//자바에서 여러가지 값들을 열거형에 담아서 제공하는 것들이 좀 있다.
+		//열거형을 어떻게 사용하는지 정도는 아는게 좋다.
+		
+		
+		
+		
+		
+		
 		
 	}
 }

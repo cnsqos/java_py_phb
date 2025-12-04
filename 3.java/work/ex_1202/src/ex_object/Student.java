@@ -17,7 +17,6 @@ public class Student {
 		return name;
 	}
 	
-	
 	//object의 hashCode()메서드를 재정의해서 학생 번호와 이름
 	//해시코드를 합한 새로운 해시코드를 반환한다.
 	@Override
@@ -28,16 +27,15 @@ public class Student {
 	
 	@Override
 	public boolean equals(Object obj) {
-		//매개변수로 넘어온 객체가 Student객체인지 확인하고,
+		//매개변수로 넘어온 객체가 Student객체인지 확인하고, 
 		if(obj instanceof Student target) {
-			//학생번호가 같고, 읾이 같으면 true를 반환
+			//학생 번호가 같고, 이름이 같으면 true를 반환
 			if(no == target.getNo() && name.equals(target.getName())) {
 				return true;
 			}
 		}
 		return false;
 	}
-	
 	
 	
 	

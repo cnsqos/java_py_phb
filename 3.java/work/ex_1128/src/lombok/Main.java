@@ -22,5 +22,14 @@ public class Main {
 				.phone("010-1111-1111")
 				.address("부평구")
 				.build();
+		
+		
+		
+		
+		
+		
+		
+		
+		
 	}
 }

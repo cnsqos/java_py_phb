@@ -28,13 +28,15 @@ public class Ex1_ArrayList {
 		
 		//데이터의 수정
 		list.set(1, "복숭아");
+		
 		System.out.println(list);
 		
 		//데이터의 삭제
 		list.remove(2);
+		
 		System.out.println(list);
 		
-		//ArrayList에 있는 요소 꺼내기
+		//ArrayList에 들어있는 요소 꺼내기
 		System.out.println(list.get(0));
 		
 		//ArrayList의 크기
@@ -49,19 +51,22 @@ public class Ex1_ArrayList {
 		//isEmpty()
 		System.out.println(list.isEmpty());
 		
-		
 		//리스트의 모든 요소 삭제
 		//clear();
-		list.clear();
-		System.out.println(list);
+		//list.clear();
+		//System.out.println(list);
 		
 		//요소의 위치찾기
 		//indexOf()
 		System.out.println(list.indexOf("복숭아"));
-		
-		
-		
 		System.out.println(list.indexOf("포도"));
 		
 	}
 }
+
+
+
+
+
+
+

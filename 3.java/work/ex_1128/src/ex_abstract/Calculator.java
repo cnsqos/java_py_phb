@@ -7,6 +7,6 @@ public abstract class Calculator {
 	//차 구하기
 	public abstract int sub(int a, int b);
 	//평균 구하기
-	public abstract int average(int [] a);
+	public abstract double average(int[] a);
 	
 }

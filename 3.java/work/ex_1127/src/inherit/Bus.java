@@ -1,7 +1,7 @@
 package inherit;
 
-public class Bus extends Car {
-	
+public class Bus extends Car{
+
 	int people;
 	
 }

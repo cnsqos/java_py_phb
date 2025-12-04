@@ -5,10 +5,9 @@ public enum Week {
 	//관례적으로 모두 알파벳 대문자로 작성한다.
 	MONDAY,
 	TUESDAY,
-	WEDNESDAY,
+	WENDSDAY,
 	THURSDAY,
 	FRIDAY,
 	SATURDAY,
 	SUNDAY
-	
 }

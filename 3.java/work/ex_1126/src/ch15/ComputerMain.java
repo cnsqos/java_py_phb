@@ -12,5 +12,10 @@ public class ComputerMain {
 		result = com.sum(values);
 		System.out.println("result : " + result);
 		
+		
+		
+		
+		
+		
 	}
 }

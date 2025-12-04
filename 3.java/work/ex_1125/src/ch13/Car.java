@@ -6,9 +6,9 @@ public class Car {
 	int maxSpeed;
 	
 	//기본 생성자
-	public Car() {
-		
-	}
+//	public Car() {
+//		
+//	}
 	
 	//값을 받아서 필드에 넣는 생성자
 	public Car(String model, String color, int maxSpeed) {
@@ -17,3 +17,8 @@ public class Car {
 		this.maxSpeed = maxSpeed;
 	}
 }
+
+
+
+
+
