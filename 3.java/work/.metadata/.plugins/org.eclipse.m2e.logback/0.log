@@ -32,3 +32,12 @@
 2025-12-04 12:43:08,568 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
 2025-12-04 13:17:05,737 [Worker-6: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
 2025-12-04 13:27:02,771 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-12-05 09:48:15,896 [Worker-7: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is up-to-date. Trying to read.
+2025-12-05 12:23:10,670 [Start Help Server] INFO  org.eclipse.jetty.server.Server - jetty-12.1.0; built: 2025-08-15T04:53:41.572Z; git: c8372b65bd15404de1444d68902c0455a3a69b64; jvm 21.0.8+9-LTS
+2025-12-05 12:23:10,724 [Start Help Server] INFO  o.e.j.server.handler.ContextHandler - Started oeje8n.ContextHandler$CoreContextHandler@3e774f0a{/help,/help,b=null,a=AVAILABLE,h=oeje8n.ContextHandler$CoreContextHandler$CoreToNestedHandler@712dd099{STARTED}}
+2025-12-05 12:23:10,725 [Start Help Server] INFO  o.e.j.s.DefaultSessionIdManager - Session workerName=node0
+2025-12-05 12:23:10,740 [Start Help Server] INFO  o.e.jetty.server.AbstractConnector - Started oejs.ServerConnector@369b7ccd{HTTP/1.1, (http/1.1)}{127.0.0.1:49536}
+2025-12-05 12:23:10,744 [Start Help Server] INFO  org.eclipse.jetty.server.Server - Started oejs.Server@42032161{STARTING}[12.1.0,sto=0] @9602283ms
+2025-12-05 13:28:13,813 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@42032161{STOPPING}[12.1.0,sto=0]
+2025-12-05 13:28:13,816 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped oejs.ServerConnector@369b7ccd{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2025-12-05 13:29:33,120 [Worker-8: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
