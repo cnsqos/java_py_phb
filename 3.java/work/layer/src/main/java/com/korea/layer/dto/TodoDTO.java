@@ -34,6 +34,11 @@ public class TodoDTO {
 		this.title = entity.getTitle();
 		this.done = entity.isDone();
 	}
+	
+	//DTO를 Entity타입으로 바꾸는 to Entity 메서드 만들기
+	public static 반환타입 toEntity(TodoDTO dto) {
+		
+	}
 }
 
 
