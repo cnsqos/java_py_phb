@@ -81,6 +81,73 @@ public class TodoService {
 	}
 	
 	
+	//db에서 모든 데이터를 꺼내서 반환하는 retrieve메서드 작성하기
+    //findByUserId() 메서드 활용하기
+	
+	
+	public List<TodoEntity> retrieve(String temporaryUserId) {
 
+	   
+	    return repository.findByUserId(temporaryUserId);
+	}
+	
+	
+	
+	//update 메서드
+	//controller에서 넘어온 id와 title,done을 받아서 findById() db에서 한 건을 꺼낸다.   
+	//isPresent() 값이 존재하면 true 없으면 false
+	//값이 있으면 꺼내서 title이랑 done 변경
+	//db에 save()를 이용해서 다시 넣어라
+	
+	public List<TodoEntity> update(TodoEntity entity){
+		//저장할 엔티티가 유효한지 확인한다.
+		validate(entity);
+		
+		//넘겨받은 엔티티 id를 이용해 TodoEntity를 가져온다.
+		//존재하지 않는 엔티티는 업데이트 할 수 없기 때문이다.
+		Optional<TodoEntity> original = repository.findById(entity.getId());
+		
+		original.ifPresent(todo -> {
+			//반환된 TodoEntity가 존재하면 값을 새 Entity값으로 덮어씌운다.
+			todo.setTitle(entity.getTitle());
+			todo.setDone(entity.isDone());
+			
+			//데이터베이스에 새 값을 저장한다.
+			repository.save(todo);
+		});
+		
+		return retrieve(entity.getUserId());
+	}
+	///////////////////////코드 추가//////////////////////////////////
+	
+	private void validate(TodoEntity entity) {
+		
+}
+	
+	
+	//delete() 메서드 만들기
+	//넘어온 entity가 유효한지 검사
+	//유효하면 삭제 후 전체 조회 후 반환
+	
+	
+	public List<TodoEntity> delete(TodoEntity entity){
+		//저장할 엔티티가 유효한지 확인한다.
+		validate(entity);
+		
+		try {
+			//엔티티를 삭제한다.
+			repository.delete(entity);
+		} catch (Exception e) {
+			// 예외 발생 시 id와 exception을 로깅한다.
+			log.error("error deleting entity ",entity.getId(),e);
+			
+			//컨트롤러로 exception을 날린다. 데이터베이스 내부 로직을 캡슐화 하기 위해 e를 반환하지 않고 새로 exception 객체를 반환한다.
+			throw new RuntimeException("error deleting entity "+entity.getId());
+		}
+		
+		return retrieve(entity.getUserId());
+	}
 	
 }
+
+

@@ -68,6 +68,11 @@ public class TestController {
 		return ResponseEntity.badRequest().body(response);
 		//ResponseDTO를 반환하는것과 body부분은 차이가 없다
 		//다만 헤더 HTTP Status를 조작할 수 있다는 점이 다르다.
+		
+		
+	
+		
+		
 	}
 	
 	

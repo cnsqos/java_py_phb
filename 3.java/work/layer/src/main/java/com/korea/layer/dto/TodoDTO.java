@@ -36,7 +36,8 @@ public class TodoDTO {
 	}
 	
 	//DTO를 Entity타입으로 바꾸는 to Entity 메서드 만들기
-	public static 반환타입 toEntity(TodoDTO dto) {
+	public static TodoEntity toEntity(TodoDTO dto) {
+		return null;
 		
 	}
 }
