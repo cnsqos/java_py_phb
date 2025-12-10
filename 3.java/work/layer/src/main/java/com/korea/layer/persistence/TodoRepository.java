@@ -49,7 +49,8 @@ public interface TodoRepository extends JpaRepository<TodoEntity, String> {
 	//반환타입 findBy 필드명 And 필드명 Order by 필드명 Asc[Desc](...)
 	
 	
-	//기본으로 제공하지 않는 것들은 인터페이스에 추상 메서드로 만들어서 사용해야 한다.
+	
+	//기본으로 제공하지 않는것들은 인터페이스에 추상메서드로 만들어서 사용해야한다.
 	List<TodoEntity> findByUserId(String userId);
 	
 	
