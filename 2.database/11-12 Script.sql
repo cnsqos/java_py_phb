@@ -14,6 +14,8 @@ collate = utf8mb4_unicode_ci;
 create user 'app_user '@'%' identified by '1111';
 
 #create, alter, drop : 오브젝트(테이블) 관련 권한
+
+
 #select, insert, update, delete : 데이터 조회/추가/수정/삭제 권한
 grant 
    create, 

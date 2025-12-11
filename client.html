@@ -3,41 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>product client</title>
-
+    <title>상품 관리 프로그램</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
+    <div class="container">
+        <h1>📦 상품 관리 프로그램</h1>
 
-    <header>
+        <div class="add-form-section">
+            <h3>상품 등록</h3>
+            <form id="addItemForm">
+                <input id="productName" placeholder="상품 이름">
+                <input id="productStock" placeholder="상품 재고">
+                <input id="productPrice" placeholder="상품 가격">
+                <button type="submit" class="btn-register">등록</button>
+            </form>
+            <div id="message"></div>
+        </div>
 
-        <h1>상품 관리 클라이언트</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>상품 번호</th>
+                    <th>상품 이름</th>
+                    <th>상품 재고</th>
+                    <th>상품 가격</th>
+                    <th>등록 날짜</th>
+                    <th>수정 날짜</th> 
+                </tr>
+            </thead>
+            <tbody id="itemTableBody">
+                <tr><td colspan="6">상품 목록 로딩 중...</td></tr>
+            </tbody>
+        </table>
+    </div>
 
-    </header>
-
-    <main>
-
-        <h2>상품 등록</h2>
-
-        <h3>상품 이름</h3>
-        <h3>상품 재고</h3>
-        <h3>상품 가격</h3>
-        <input type="button" value="등록">
-
-
-
-        <h3>상품 번호</h3>
-        <h3>상품 이름</h3>
-        <h3>상품 재고</h3>
-        <h3>상품 가격</h3>
-        <h3>등록 날짜</h3>
-        <h3>수정 날짜</h3>
-        
-    </main>
-    
-    
-
-
+    <script type="module" src="app.js"></script>
 </body>
 </html>
