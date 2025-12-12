@@ -9,35 +9,62 @@
 <body>
     <div class="container">
         <h1>📦 상품 관리 프로그램</h1>
-
         <div class="add-form-section">
             <h3>상품 등록</h3>
             <form id="addItemForm">
-                <input id="productName" placeholder="상품 이름">
-                <input id="productStock" placeholder="상품 재고">
-                <input id="productPrice" placeholder="상품 가격">
+                <input id="productName" name="productName" placeholder="상품 이름">
+                <input id="productStock" name="productStock" placeholder="상품 재고">
+                <input id="productPrice" name="productPrice" placeholder="상품 가격">
                 <button type="submit" class="btn-register">등록</button>
             </form>
             <div id="message"></div>
         </div>
 
-        <table>
+        <table border="1">
             <thead>
                 <tr>
+                    <th>단일 선택</th>
+                    <th>주문 개수</th>
                     <th>상품 번호</th>
                     <th>상품 이름</th>
                     <th>상품 재고</th>
                     <th>상품 가격</th>
                     <th>등록 날짜</th>
-                    <th>수정 날짜</th> 
+                    <th>수정 날짜</th>
                 </tr>
             </thead>
             <tbody id="itemTableBody">
-                <tr><td colspan="6">상품 목록 로딩 중...</td></tr>
+                <tr><td colspan="8">상품 목록 로딩 중...</td></tr>
             </tbody>
         </table>
-    </div>
 
+        <div class="order-section">
+            <button id="orderButton" class="btn-order">
+                주문하기
+            </button>
+            <button id="fetchOrdersButton" class="btn-history">주문내역</button>
+            <div id="orderMessage" style="margin-top: 10px; color:green;"></div>
+        </div>
+
+        <div class="order-history-section" style="margin-top : 30px;">
+            <h3>🛒주문 내역</h3>
+            <div id="orderHistoryMessage" style="color:blue; margin-bottom: 10px;">주문 내역 버튼을 눌러주세요</div>
+            <table border="1" style="width:100%">
+                <thead>
+                    <tr>
+                        <th>상품 이름</th>
+                        <th>상품 가격</th>
+                        <th>상품 개수</th>
+                        <th>결제 금액</th>
+                        <th>주문 날짜</th>
+                    </tr>
+                </thead>
+                <tbody id="orderHistoryTableBody">
+                    <tr><td colspan="5">주문 내역 로딩 중...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
     <script type="module" src="app.js"></script>
 </body>
 </html>

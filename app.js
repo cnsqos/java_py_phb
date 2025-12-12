@@ -117,7 +117,30 @@ const itemTableBody = document.querySelector("#itemTableBody");
 const addItemForm = document.querySelector("#addItemForm");
 const messageElement = document.querySelector("#message");
 
+//주문내역 관련 DOM 요소를 추가
+//주문내역 버튼
+const fetchOrdersButton = document.querySelector("#fetchOrdersButton");
+//테이블의 tbody
+const orderHistoryTableBody = document.querySelector("#orderHistoryTableBody");
+//메시지
+const orderHistoryMessageElement = document.querySelector("#orderHistoryMessage");
+
+
 document.addEventListener("DOMContentLoaded", () => {
+    //목록조회
+    fetchProducts();
+    //상품추가
+    addItemForm.addEventListener("submit", handleAddItem);
+    //주문내역 조회
+    fetchOrdersButton.addEventListener("click", handleFetchOrders);
+}
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded"), () => {
     fetchProducts();
     addItemForm.addEventListener("submit", handleAddItem);
 });
@@ -160,8 +183,119 @@ async function handleAddItem(event) {
         price: parseInt(document.querySelector("#productPrice").value)
     };
 
-    messageElement.textContent = '등록중...';
-    messageElement.style.color = '#007bff';
+
+async function handleFetchOrders(event) {
+    event.preventDefault();
+    //메시지의 내용을 "주문 내역 로딩 중...";
+    //메시지의 글씨색 #007bff;
+}
+
+
+async function handleFetchOrders(){
+    
+    try {
+        //Get 조회 요청을 하여 주문 내역 데이터 받기
+        const orders = await apiFetch('/orders/total');
+        //renderOrderHistoryTable(데이터); : 데이터를 받아서 테이블에 넣어주는 역할
+        renderOrderHistoryTable(orders);
+
+        orderHistoryMessageElement.textContent = `총 ${orders.length}건의 주문 내역이 조회되었습니다.`;
+        orderHistoryMessageElement.style.color = '#28a745';
+
+    } catch (error) {
+    orderHistoryTableBody.innerHTML = '<tr><td colspan="5">주문 내역을 불러올 수 없습니다. 서버상태를 확인해주세요</td></tr>';
+       orderHistoryMessageElement.textContent = `주문내역 조회 오류: ${error.message}`;
+       orderHistoryMessageElement.style.color = 'red';
+    }
+}
+
+function renderOrderHistoryTable(orders){
+    //orders에 내용이 없다면 "등록된 주문 내역이 없습니다."
+    
+    if(!orders || orders.length === 0){
+        orderHistoryTableBody.innerHTML = '<tr><td colspan="5">등록된 주문 내역이 없습니다.</td></tr>';
+        return;
+    }
+
+
+
+
+    //최신 주문 내역이 위에 오도록 데이터를 추가
+    
+    orders.forEach((order) => {
+        const row = orderHistoryTableBody.insertRow(0);
+        //상품이름
+
+// 1. 단일 선택 라디오 버튼
+    const radioCell = row.insertCell(0);
+    const radio = document.createElement('input');
+    radio.type = 'radio';
+    radio.name = 'selectedProduct'; // 모든 라디오 버튼이 같은 그룹에 속하게 함
+    radio.value = item.productId; // 상품 ID를 값으로 설정
+    radioCell.appendChild(radio);
+
+    // 2. 주문 개수 입력 필드
+    const orderCountCell = row.insertCell(1);
+    const orderInput = document.createElement('input');
+    orderInput.type = 'number';
+    orderInput.min = '1';
+    orderInput.id = `orderCount-${item.productId}`; // 상품 ID로 고유 ID 부여
+    orderInput.classList.add('order-count-input');
+    orderInput.placeholder = '개수';
+    orderInput.disabled = true; // 기본 비활성화
+    orderInput.style.width = '60px';
+    orderCountCell.appendChild(orderInput);
+    
+    // 3. 상품 정보 (총 8개의 셀을 맞추기 위해 인덱스 조정)
+    row.insertCell(2).textContent = item.productId;
+    row.insertCell(3).textContent = item.productName;
+    row.insertCell(4).textContent = item.productStock;
+    row.insertCell(5).textContent = item.productPrice;
+    row.insertCell(6).textContent = item.registerDate;
+    row.insertCell(7).textContent = item.updateDate;
+        
+
+    //메시지 "주문 내역 로딩 중..."
+    //글씨색 #007bff;
+
+    //tbody 내부에 주문내역을 불러오는 중입니다...
+
+    const orderButton = document.querySelector("#orderButton");
+    const orderMessageElement = document.querySelector("#orderMessage");
+
+    const ProductId = selectedRadio.value;
+    const orderInput = document.querySelector(`#orderCount-${ProductId}`);
+    const orderCount = parseInt(orderInput.10); //입력한 개수를 숫자로 변환
+    
+    //진짜 숫자를 입력했는지, 음수를 입력했는지 조사
+    if(isNaN(orderCount) || orderCount <= 0){
+        orderMessageElement.textContent = '유효한 주문 개수를 입력해주세요(1이상)';
+        orderMessageElement.style.color = 'orange';
+        return;
+
+}
+
+    const orderData = {
+        productId: ProductId,
+        productCount: productCount
+    };
+
+
+    orderMessageElement.textContent = '주문 처리중...';
+    orderMessageElement.style.color = '#007bff';
+    try {
+        await apiFetch('/orders', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(orderData)
+        });
+
+
+
+    messageElement.textContent = '등록중...',
+    messageElement.style.color = '#007bff',
 
     try {
         await apiFetch('/product', {
