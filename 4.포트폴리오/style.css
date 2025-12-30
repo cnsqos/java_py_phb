@@ -1,0 +1,157 @@
+body{
+position : relative;
+background: #cae7cf;
+height : 100vh;
+margin: 0;
+}
+.section{
+background:#f8f9fc;
+border : 1px solid #dfe6e9;
+border-radius : 10px;
+padding : 16px;
+margin-bottom : 16px;
+box-shadow : 0 4px 10px rgba(0,0,0,0.05)
+}
+.section-title{
+color : #2c3e50;
+font-weight : bold;
+margin-bottom: 8px;
+}
+.text-block{
+font-size : 16px;
+color :#444;
+margin-bottom : 12px;
+}
+
+/* 컨테이너에게 스타일 주기 */
+.container{
+max-width : 1200px;
+width : 100%;
+margin : 0 auto;
+background : #ffffff;
+border : 1px solid #2d5f0a9a;
+border-radius : 12px;
+padding : 24px;
+box-shadow : 0 4px 12px rgba(0,0,0,0.05);
+}
+.profile-image{
+width: 120px;
+height: 120px;
+border : 2px solid #dbd834;
+border-radius: 50%;
+aspect-ratio: 1/1;
+object-fit: cover;
+}
+
+/* flex는 직계자식한테만 영향을 준다 */
+header{
+display : flex;
+align-items: center;
+gap : 10px;
+padding-bottom: 2px;
+border-bottom: 3px solid #eee;
+}
+.job{
+color: #888;
+font-size: 1rem;
+}
+
+.role{
+color: #1372c0;
+font-size: 1rem;
+font-weight : bold;
+margin : 0 0 12px 0;
+}
+
+.description{
+line-height : 1.6;
+margin : 0;
+color : #555;
+}
+
+section h2{
+border-left : 6px solid #9db361;
+padding-left : 10px;
+}
+.project-container{
+display:flex;
+gap: 16px;
+}
+.project-top-row{
+display:flex;
+/* space-between : 좌우로 벌리기 */
+justify-content: space-between;
+}
+.project-container .section{
+width: 100%;
+}
+.contact{
+margin-top: 32px;
+padding-top: 20px;
+border-top: 2px solid #eee;
+font-size: 0.95rem;
+color: #444;
+line-height: 1.6;  
+}
+
+.project-desc {
+margin: 0;
+line-height: 1.5;
+color: #555;
+}
+
+.project-top-row {
+display: flex;
+justify-content: space-between; /* 좌우로 벌리기 */
+flex-wrap: wrap; /* 화면이 좁아지면 줄바꿈 허용 */
+margin-bottom: 6px;
+}
+
+
+@media (max-width: 768px) {
+
+body {
+height: auto;
+}
+
+/* 전체 컨테이너 여백 */
+.container {
+padding: 16px;
+}
+
+/* 헤더: 가로 → 세로 */
+header {
+flex-direction: column;
+align-items: center;
+text-align: center;
+gap: 12px;
+}
+
+/* 프로필 이미지 중앙 */
+.profile-image {
+width: 100px;
+height: 100px;
+}
+
+/* 프로젝트 카드: 세로 정렬 */
+.project-container {
+flex-direction: column;
+}
+
+/* 프로젝트 상단 정보 줄바꿈 허용 */
+.project-top-row {
+flex-direction: column;
+gap: 4px;
+}
+}
+.project a {
+display: inline-block;
+margin-top: 8px;
+color: #1372c0;
+font-weight: bold;
+text-decoration: none;
+}
+
+.project a:hover {
+text-decoration: underline;
+}
